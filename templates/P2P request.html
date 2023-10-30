@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>P2P REQUEST PAGE</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap-5/css/bootstrap.min.css')}}">
+
+</head>
+<style type="text/css">
+	 .btn {
+		color: white;
+	}
+</style>
+<body>
+	<!---NAV SECTION--->
+	<div class="navbar navbar-expand-md navbar-dark" style="background-color: #312d84;">
+		<div class="container">
+		
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>	
+			</button>
+
+			<div class="navbar-brand me-5"><p class="h3 fw-bold">FCMB HACKATHON</p></div>
+
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a href="{{url_for('home')}}" class="nav-link">HOME</a></li>
+					<li class="nav-item"><a href="{{url_for('peer')}}" class="nav-link">PEER2PEER LOAN</a></li>
+					<li class="nav-item"><a href="{{url_for('about')}}" class="nav-link">ABOUT P2P</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!---END OF NAV--->
+
+	<!---ABOUT--->
+		<div class="container mt-3">
+			<div class="text-center display-6">REQUEST PAGE</div>
+			<div class="text-center mt-3 lead">On this page you will be able to request loan from peers</div>
+		</div>
+	<!---END ABOUT--->
+
+<!---USER SECTION--->
+
+	<section class="container">
+		<table class="table">
+		  <thead>
+        
+		    <tr>
+		      <th scope="col">LENDER'S ID</th>
+		      <th scope="col">NAME</th>
+		      <th scope="col">EMAIL</th>
+          <th scope="col">ACCOUNT NUMBER</th>
+		      <th scope="col">ACTIVITY</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+        {% for dat in data%}
+		    <tr>
+		      <th scope="row">{{dat.id}}</th>
+		      <td>{{dat.name}}</td>
+		      <td>{{dat.email}}</td>
+          <td>{{dat.accountnumber}}</td>
+		      <td><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #312d84;">REQUEST LOAN</button></td>
+		    </tr>
+		    
+		  </tbody>
+      {% endfor %}
+		</table>
+	</section>
+<!---END OF USER SECTION--->
+
+<!---MODEL SECTION--->
+	
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">LOAN REQUEST FORM</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/loanrequest" method="post">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">NAME:</label>
+            <input type="text" name="name" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Lender's id:</label>
+            <input type="text" name="id" class="form-control" id="recipient-name">
+          </div>      
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">PHONE NUM:</label>
+            <input type="text" name="number" class="form-control" id="recipient-name">
+          </div>
+          
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">EMAIL:</label>
+            <input type="text" name="email" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">ADDRESS:</label>
+            <input type="text" name="address" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">EMPLOYMENT STATUS:</label>
+            <input type="text" name="employment" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">MONTHLY INCOME:</label>
+            <input type="text" name="salary" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">LOAN AMOUNT:</label>
+            <input type="text" name="loanamount" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">BORROWER ACCOUNT NUM:</label>
+            <input type="text" name="accountnumber" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">REPAYMENT PERIOD:</label>
+            <input type="text" name="period" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">FIRST GARRANTOR NAME:</label>
+            <input type="text" name="garantorname1" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">FIRST GARRANTOR PHONE NUM:</label>
+            <input type="text" name="garantornumber1" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">FIRST GARRANTOR ADDRESS:</label>
+            <input type="text" name="garantoraddress1" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">SECOND GARRANTOR NAME:</label>
+            <input type="text" name="garantorname2" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">SECOND GARRANTOR PHONE NUM:</label>
+            <input type="text" name="garantornumber2" class="form-control" id="recipient-name">
+          </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">SECOND GARRANTOR ADDRESS:</label>
+            <input type="text" name="garantoraddress2" class="form-control" id="recipient-name">
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn" style="background-color: #312d84;">REQUEST</button>
+      </div> 
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!---END OF MODEL SECTION--->
+
+
+
+<script type="text/javascript" src="{{url_for('static', filename='bootstrap-5/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

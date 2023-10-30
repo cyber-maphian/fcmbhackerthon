@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN PAGE</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap-5/css/bootstrap.min.css')}}">
+</head>
+<body>
+	<!---SECTION--->
+	<section class="container p-3">
+		<div class="row justify-content-center">
+			<div class="col-md-4 border rounded shadow py-5 my-5">
+				<p class="display-5 text-center lead" style="color: #312d84;">LOGIN</p>
+				<form class="p-3" action="/login" method="post"">
+					<input type="text" name="name" class="form-control" placeholder="ENTER USERNAME">
+					<input type="password" name="password" class="form-control mt-3" placeholder="ENTER PASSWORD">
+					<input type="submit" name="submit" class="btn mt-3" value="LOGIN" style="background-color: #312d84; text-decoration: none; color: white;">
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="{{url_for('static', filename='bootstrap-5/js/bootstrap.min.js')}}"></script>
+</body>
+</html>	

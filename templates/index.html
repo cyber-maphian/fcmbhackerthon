@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap-5/css/bootstrap.min.css')}}">
+</head>
+<body style="background-color: #d6d6de;">
+
+	<!---NAV SECTION--->
+	<div class="navbar navbar-expand-md navbar-dark" style="background-color: #312d84;">
+		<div class="container">
+		
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>	
+			</button>
+
+			<div class="navbar-brand me-5"><p class="h3 fw-bold">FCMB HACKATHON</p></div>
+
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a href="{{url_for('home')}}" class="nav-link">HOME</a></li>
+					<li class="nav-item"><a href="{{url_for('peer')}}" class="nav-link">PEER2PEER LOAN</a></li>
+					<li class="nav-item"><a href="{{url_for('voice')}}" class="nav-link">VOICE OF THE CUSTOMER</a></li>
+					<form action="/switch" method="post">
+						<button class="btn btn-light">SWITCH ACCOUNT</button>
+					</form>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!---END OF NAV--->
+
+
+	<!---SETION--->
+	<section class="p-4">
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-md-12 p-4 border rounded" style="background-color: #8093ff">
+					<p class="display-6 fw-bold text-light">GOOD MORNING FCMB INNOVATIVE</p>
+					<p class="h5 text-light">Hope You Are Having A Great Time</p>
+				</div>
+				<div class="col-md-6 p-4 mt-3 border rounded shadow bg-light">
+					<div class="mb-3 ms-4 bg-dark border rounded justify-content-center" style="width: 95px; height: 95px;"></div>
+					<div class="d-flex">
+							<div class="ms-4">
+								<p class="h5">NAME: {{data.name}}</p>
+								<p class="h5">EMAIL: {{data.email}}</p>
+								<p class="h5">EMPLOYMENT STATUS: {{data.employment}}</p>
+								<p class="h5">DATE OF BIRTH: {{data.birthdate}}</p>
+								<p class="h5">ADDRESS: {{data.address}}</p>
+							</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6 justify-item-start p-4 mt-3 border rounded shadow bg-light">
+					<div class="h1 text-center mb-3">ACCOUNT DETAILS</div>
+					<div class="d-flex">
+							<div class="ms-4">
+								<p class="h5">ACCOUNT BALANCE: ${{data.accountbalance}}</p>
+								<p class="h5">MONTHLY SALERY: ${{data.salary}}</p>
+								<p class="h5">LOAN AMOUNT: ${{data.loan}}</p>
+								<p class="h5">PAYMENT PERIOD: {{data.period}}</p>
+								<p class="h5">ID: {{data.id}}</p>
+								<p class="h5">MESSAGE: {{data.message}}</p>
+							</div>
+					</div>
+			</div>
+		</div>
+	</section>
+
+<script type="text/javascript" src="{{url_for('static', filename='bootstrap-5/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

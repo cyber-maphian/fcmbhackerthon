@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VOICE OF THE CUSTOMER</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap-5/css/bootstrap.min.css')}}">
+</head>
+<body>
+	<!---NAV SECTION--->
+	<div class="navbar navbar-expand-md navbar-dark" style="background-color: #312d84;">
+		<div class="container">
+		
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>	
+			</button>
+
+			<div class="navbar-brand me-5"><p class="h3 fw-bold">FCMB HACKATHON</p></div>
+
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a href="{{url_for('home')}}" class="nav-link">HOME</a></li>
+					<li class="nav-item"><a href="{{url_for('peer')}}" class="nav-link">PEER2PEER LOAN</a></li>
+					<li class="nav-item"><a href="{{url_for('voice')}}" class="nav-link">VOICE OF THE CUSTOMER</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!---END OF NAV--->
+
+	<!---ABOUT--->
+		<div class="container">
+			<div class="text-center mt-5 display-6">WELCOME TO OUR VOICE OF THE CUSTOMER PAGE</div>
+			<div class="text-center mt-3 lead">VOICE OF THE CUSTOMER is a feature which aim at RECEIVING CUSTOMER FEED BACK and COMPLAIN using them to improve and manage products, services, and overall customer experiences.</div>
+		</div>
+	<!---END ABOUT--->
+
+	<!---TESTIMONY--->
+		<div class="container mt-3">
+			<p class="text-center h4 fw-bold">TESIMONY</p>
+			<div class="row g-5 justify-content-center">
+				<div class="col-md-4 border rounded">
+					<img src="{{url_for('static', filename='image/man1.jpg')}}" class="img-fluid w-50 my-3">
+					<p class="fw-bold ">NAME: Robert H.</p>
+					<p class="">"The support I received was outstanding. They went above and beyond to help me. I've already recommended this service to my friends."</p>
+				</div>
+				<div class="col-md-4 border rounded">
+					<img src="{{url_for('static', filename='image/woman2.jpg')}}" class="img-fluid w-50 my-3">
+					<p class="fw-bold ">NAME: Emily L.</p>
+					<p class="">"I was initially skeptical, but this service has been a game-changer for me. It's streamlined my work and saved me time. Great job, team!"</p>
+				</div>
+				<div class="col-md-4 border rounded">
+					<img src="{{url_for('static', filename='image/woman1.jpg')}}" class="img-fluid w-50 my-3">
+					<p class="fw-bold ">NAME: ABUBAKAR</p>
+					<p class="">"This service is a must-have for anyone in my industry. It's easy to use, and the support team is incredibly responsive. I can't imagine my work without it now."</p>
+				</div>
+			</div>
+		</div>
+	<!---END OF TESTIMONY--->
+
+
+	<!---INPUT SECTION--->
+		<div class="container my-5">
+			<p class="text-center h3 fw-bold mt-3">FEED BACK FORM</p>
+			<p class="text-center">We will be happy to get your feed back it will help us improve how product, services, and overall customer experiences.</p>
+			<div class="row justify-content-center">
+				<div class="col-5 border rounded p-4">
+					<form action="/question" method="post">
+						<input type="text" name="name" class="form-control" placeholder="Enter Your Name">
+						<input type="text" name="email" class="form-control mt-2" placeholder="Enter Your Email">
+						<textarea type="text" name="message"class="form-control mt-2" placeholder="Write Your Message Here"></textarea>
+						<input type="submit" class="btn btn-dark mt-2" value="SUBMIT">
+					</form>
+				</div>
+			</div>
+		</div>
+	<!---END INPUT SECTION--->
+
+
+	<!---FAQ--->
+		<div class="container mb-5">
+			<p class="text-center h4 fw-bold">FREQUENTLY ASK QUESTIONS</p>
+			<div class="row justify-content-center">
+				<div class="col-md-7">
+					<div class="accordion accordion-flush" id="accordionFlushExample">
+					  <div class="accordion-item">
+					    <h2 class="accordion-header" id="flush-headingOne">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+					        What are the different types of bank accounts?
+					      </button>
+					    </h2>
+					    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">Banks offer various types of accounts, including savings accounts, checking accounts, certificates of deposit (CDs), and money market accounts. Each serves a different purpose.</div>
+					    </div>
+					  </div>
+					  <div class="accordion-item">
+					    <h2 class="accordion-header" id="flush-headingTwo">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+					       How do I open a bank account?
+					      </button>
+					    </h2>
+					    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">To open a bank account, you typically need to visit a local branch, provide identification, complete an application, and deposit an initial sum of money. Online accounts may have different requirements.</div>
+					    </div>
+					  </div>
+					  <div class="accordion-item">
+					    <h2 class="accordion-header" id="flush-headingThree">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+					         What is the difference between a savings account and a checking account?
+					      </button>
+					    </h2>
+					    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body">A savings account is designed for saving money and typically offers a higher interest rate. A checking account is for everyday transactions and often allows check writing and debit card use.</div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!---END OF FAQ--->
+
+
+	<script type="text/javascript" src="{{url_for('static', filename='bootstrap-5/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ABOUT P2P</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap-5/css/bootstrap.min.css')}}">
+</head>
+<body>
+	<!---NAV SECTION--->
+	<div class="navbar navbar-expand-md navbar-dark" style="background-color: #312d84;">
+		<div class="container">
+		
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>	
+			</button>
+
+			<div class="navbar-brand me-5"><p class="h3 fw-bold">FCMB HACKATHON</p></div>
+
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a href="{{url_for('home')}}" class="nav-link">HOME</a></li>
+					<li class="nav-item"><a href="{{url_for('peer')}}" class="nav-link">PEER2PEER LOAN</a></li>
+					<li class="nav-item"><a href="" class="nav-link">ABOUT P2P</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!---END OF NAV--->
+
+
+	<!---ABOUT P2P--->
+	<div class="container mt-5">
+			<div class="text-center display-6">WELCOME TO OUR PEER2PEER(P2P) LENDING PAGE</div>
+			<div class="text-center mt-3 lead">peer2peer is a financial practice and a feature of our application that enable user to lend money directly to other users, our system will give you the ABILITY TO GIVE SHORT-TIME LOAN, MONITOR THE LOAN and DEMAND PAYMENT FROM BENEFICIALRY.</div>
+			<div class="mt-3">
+				<ul>
+					<li class="lead"><span class="fw-bold">What P2P is About:</span> P2P is online platform that acts as an intermediary between borrowers and lenders, These platforms provide the leaves user with the ability to GIVE SHORT-TERM LOAN, MONITOR THE LOAN, and DEMAND PAYMENT FROM BENEFICIARY.</li>
+					<li class="lead mt-3"><span class="fw-bold">Borrowers and Lenders:</span> Borrowers are individuals seeking personal loans, small businesses in need of working capital, or others in need of financing. Lenders are individuals or investors who provide the funds for these loans.</li>
+					<li class="lead mt-3"><span class="fw-bold">Loan Tracking:</span> on this space lenders can keep track of there of there loan, specifying the loan amount, purpose, and interest rate they are willing to pay.</li>
+					<li class="lead mt-3"><span class="fw-bold">Repayment:</span> Borrowers make regular repayments, which include both principal and interest, according to a predetermined schedule. These repayments are distributed to the lenders who funded the loan. mt-3</li>
+				</ul>
+			</div>
+	</div>
+	<!---END ABOUT P2P--->
+
+
+	<script type="text/javascript" src="{{url_for('static', filename='bootstrap-5/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

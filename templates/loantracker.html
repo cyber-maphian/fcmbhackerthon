@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOAN TRACKER</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap-5/css/bootstrap.min.css')}}">
+</head>
+<style type="text/css">
+	a {
+		text-decoration: none;
+		color: black;
+	}
+</style>
+<body>
+	<!---NAV SECTION--->
+	<div class="navbar navbar-expand-md navbar-dark" style="background-color: #312d84;">
+		<div class="container">
+		
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>	
+			</button>
+
+			<div class="navbar-brand me-5"><p class="h3 fw-bold">FCMB HACKATHON</p></div>
+
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a href="{{url_for('home')}}" class="nav-link">HOME</a></li>
+					<li class="nav-item"><a href="{{url_for('peer')}}" class="nav-link">PEER2PEER LOAN</a></li>
+					<li class="nav-item"><a href="{{url_for('about')}}" class="nav-link">ABOUT P2P</a></li>
+					<li class="nav-item"><a href="{{url_for('voice')}}" class="nav-link">VOICE OF THE CUSTOMER</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!---END OF NAV--->
+
+	<!---ABOUT--->
+		<div class="container">
+			<div class="text-center mt-5 display-6">LOAN TRACKER</div>
+			<div class="text-center mt-3 lead">In this section you will be able to track your loan easily</div>
+		</div>
+	<!---END ABOUT--->
+
+<!---LOAN DETAILS SECTION--->
+
+	<section class="container">
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">LOAN AMOUNT</th>
+		      <th scope="col">ANNUAL INTEREST</th>
+		      <th scope="col">REPAYMENT PERIOD</th>
+		      <th scope="col">START DATE</th>
+		      <th scope="col">PAYMENT FREQUENCY</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th>{{data.loanamount}}</th>
+		      <td>5%</td>
+		      <td>{{data.loanperiod}}</td>
+		      <td>{{data.date}}</td>
+		      <td>EVERY 3 MONTH</td>
+		    </tr>
+		     
+		  </tbody>
+		</table>
+	</section>
+
+
+
+
+		<section class="container mt-5">
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">PAYMENT DATE</th>
+		      <th scope="col">MONTHLY PAYMENT</th>
+		      <th scope="col">PRINCIPAL PAYMENT</th>
+		      <th scope="col">INTEREST PAYMENT</th>
+		      <th scope="col">REMAINING LOAN BALANCE</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th>In {{data.loanperiod}} Time</th>
+		      <td>$50</td>
+		      <td>{{data.loanamount}}</td>
+		      <td>10%</td>
+		      <td>{{data.loanamount}}</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</section>
+
+	<div class="container my-4">
+		<div class="row justify-content-center">
+			<div class="col-7">
+				<img src="{{url_for('static', filename='image/barchart.png')}}" class="img-fluid">
+			</div>
+		</div>
+	</div>
+<!---END OF LOAN DETAIL SECTION--->
+
+
+<script type="text/javascript" src="{{url_for('static', filename='bootstrap-5/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+	<!---PEER2PEER SECTION
+	The user clicks on the "PEER2PEER" tab to access it's features:
+
+1. Request loan Section.
+2. The user selects the user they want to borrow money from.
+3. The user enters the amount of money they want to borrow.
+4. The system sends a notification to the other user requesting the loan.
+5. The other user can accept or decline the loan request.
+6. If the other user accepts the loan request, the system transfers the money from the lender's wallet to the borrower's wallet.
+7. The system creates a loan record to track the loan.
+
+
+	<!---BORROW MONEY
+
+1. The user clicks on the "Borrow money" button.
+2. The user selects the user they want to borrow money from.
+3. The user enters the amount of money they want to borrow.
+4. The system sends a notification to the other user requesting the loan.
+5. The other user can accept or decline the loan request.
+6. If the other user accepts the loan request, the system transfers the money from the lender's wallet to the borrower's wallet.
+7. The system creates a loan record to track the loan.

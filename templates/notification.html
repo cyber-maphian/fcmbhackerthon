@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NOTIFICATION PAGE</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap-5/css/bootstrap.min.css')}}">
+</head>
+<style type="text/css">
+	 .btn {
+	 	text-decoration:  none;
+		color: white;
+	}
+</style>
+<body>
+	<!---NAV SECTION--->
+	<div class="navbar navbar-expand-md navbar-dark" style="background-color: #312d84;">
+		<div class="container">
+		
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>	
+			</button>
+
+			<div class="navbar-brand me-5"><p class="h3 fw-bold">FCMB HACKATHON</p></div>
+
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a href="{{url_for('home')}}" class="nav-link">HOME</a></li>
+					<li class="nav-item"><a href="{{url_for('peer')}}" class="nav-link">PEER2PEER LOAN</a></li>
+					<li class="nav-item"><a href="{{url_for('about')}}" class="nav-link">ABOUT P2P</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!---END OF NAV--->
+
+	<!---ABOUT--->
+		<div class="container mt-3">
+			<div class="text-center display-6">NOTIFICATION PAGE</div>
+			<div class="text-center mt-3 lead">You will receive notification of all transaction on this page</div>
+		</div>
+	<!---END ABOUT--->
+
+	<!---MAIN--->
+		<section class="container">
+			<div class="row justify-content-center  mt-3">
+				<div class="col-md-6 bg-primary border rounded p-2">
+					<p class="h4 mt-2">LOAN REQUEST</p>
+					<p>mr/mrs NAME is requesting for a loan from you</p>
+					<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#notification" style="background-color: #312d84;">LEARN MORE</button>
+				</div>
+			</div>
+		</section>
+	<!---END OF MAIN--->
+
+	<!---MAIN MODAL--->
+		
+		<div class="modal fade" id="notification" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">BORROWER DETAIL</h5>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      </div>
+		      <div class="modal-body">
+		        <ul class="list-group list-group-flush">
+				  <li class="list-group-item">NAME: {{data.loanname}}</li>
+				  <li class="list-group-item">PHONE NUM: {{data.loannumber}}</li>
+				  <li class="list-group-item">EMAIL: {{data.loanemail}}</li>
+				  <li class="list-group-item">ADDRESS: {{data.loanaddress}}</li>
+				  <li class="list-group-item">EMPLOYMENT STATUS: {{data.loanemployment}}</li>
+				  <li class="list-group-item">MONTHLY INCOME: ${{data.loansalary}}</li>
+				  <li class="list-group-item">LOAN AMOUNT: ${{data.loanamount}}</li>
+				  <li class="list-group-item">BORROWER ACC NUM: {{data.loanaccountnumber}}</li>
+				  <li class="list-group-item">REPAYMENT PERIOD: {{data.loanperiod}}</li>
+				  <li class="list-group-item">FIRST GARRANTOR NAME: {{data.garantorname1}}</li>
+				  <li class="list-group-item">FIRST GARRANTOR PHONE NUM: {{data.garantornumber1}}</li>
+				  <li class="list-group-item">FIRST GARRANTOR ADDRESS: {{data.garantoraddress1}}</li>
+				  <li class="list-group-item">SECOND GARRANTOR NAME: {{data.garantorname2}}</li>
+				  <li class="list-group-item">SECOND GARRANTOR PHONE NUM: {{data.garantornumber2}}</li>
+				  <li class="list-group-item">SECOND GARRANTOR ADDRESS: {{data.garantoraddress2}}</li>
+				</ul>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">DECLINE</button>
+		        <button type="button" class="btn" style="background-color: #312d84; text-decoration: none; color: white;"><a href="peer2peer.html">GRANT LOAN</a></button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	<!---END OF MAIN MODAL--->
+
+
+
+	<script type="text/javascript" src="{{url_for('static', filename='bootstrap-5/js/bootstrap.min.js')}}"></script>
+</body>
+</html>

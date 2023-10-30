@@ -1,0 +1,10 @@
+		
+		<!---VOICE OF CUSTOMER ALGORITHM
+
+	The Voice of the Customer (VoC) is a term used in business and product development to describe the process of capturing and understanding the preferences, needs, and expectations of customers. It involves collecting and analyzing feedback and insights from customers to improve products, services, and overall customer experiences. The goal of VoC is to align business strategies and offerings with what customers truly want and value. We craeted a simple system which easily capture customer feed back and save it in a file where the company can get them analyse and impliment them, to improve there overfall services.
+
+	1. On the home page click on the "VOICE OF THE CUSTOMER" tab.
+	2. Voice of customer page os going to open
+	3. it contain customer testimony, has a frequently ask question section(FAQ) and a feed back form where customer can 		input wheather testimony, complain or suggestion.
+	4. when ever a customer input feed back, this detail will be transfer to a file called review_data.txt
+	5. In this document the company will receive the data for further processing and them to improve there services and if		there is any need of correction it will be done in other to increase customer satisfaction

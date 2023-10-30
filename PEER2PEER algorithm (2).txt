@@ -1,0 +1,80 @@
+	<!---LOG IN
+1. click on the switch
+2. The user enters their username and password.
+3. The system verifies the user's credentials.
+4. If the user's credentials are valid, the system logs the user in.
+
+NOTE: since it a demo we created the accounts mannually, so signin function is not included
+
+	<!---PEER2PEER SECTION
+	The user clicks on the "PEER2PEER" tab to access it's features:
+
+1. Request loan Section.
+2. Notification Section.
+3. Repay Loan Section.
+4. Loan Tracker Section.
+5. Request Repayment Section.
+6. Give Loan Section.
+
+	<!---REQUEST LOAN SECTION
+
+1. The user clicks on the "REQUEST LOAN" loan.
+2. A page with list of users you can request loan from will appear
+3. The user selects the user they want to borrow money from.
+4. The user fill in all information reguiding the loan they want to request.
+5. The system sends a notification to the user they requested from.
+6. The other user can accept or decline the loan request.
+
+	<!---NOTIFICATION SECTION
+
+1. The user first enter their ID then clicks on the "ENTER" tab.
+2. A page with all your notification will appear.
+3. On this page you will see all loan request and other notification.
+
+	<!---REPAY LOAN SECTION
+
+1. The user clicks on the "REPAY LOAN" tab.
+2. A popup will appear for you to fill in the loan repayment details.
+3. if the payment is successful you will be debited and the user you collected the loan from will be credited
+
+
+	<!---LOAN TRACKER SECTION
+
+1. The user first enter his/her user ID then clicks on the "LOAN TRACKER" button.
+2. The system displays a list of all of the BORROWER INFORMATION.
+3. The first table carry information from the BORROWER INFORMATION.
+	a. LOAN AMOUNT
+	b. ANNUAL INTEREST
+	c. REPAYMENT PERIOD 
+	d. START DATE
+	e. PAYMENT FREQUENCY
+
+4. The second table carry the loan information
+	a. PAYMENT DATE
+	b. MONTHLY PAYMENT
+	c. PRINCIPAL PAYMENT
+	d. INTEREST PAYMENT(%)
+	e. REMAINING LOAN BALANCE
+
+3. On the buttom of the page users can also see information graphical rersentation.
+	NOTE: the one represented on the demo page is FRICTIONAL and not CORRECT
+
+	<!---REQUEST YOUR PAYMENT
+
+1. The user enter BORROWER ID in the first input field.
+2. The on the second field the user enter the message they want to send to the BORROWER.
+3. The user selects the user they want to request payment from.
+4. Lastly the user click enter.
+5. The BORROWER will recieves your notification.
+
+
+	<!---GIVE LOAN SECTION
+
+1. The user clicks on the "GIVE LOAN" tab.
+2. A popup will appear for you to fill in the loan repayment details.
+3. if the payment is successful you will be debited and the BORROWER will recieve the money you sent to him.
+
+
+	<!---CONCLUTION
+
+This is just a basic algorithm for a PEER2PEER site that allows users to sign in, borrow money, transfer money, track their money, and request payments from each other. 
