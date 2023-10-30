@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PEER2PEER PAGE</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap-5/css/bootstrap.min.css')}}">
+</head>
+<style type="text/css">
+	a {
+		text-decoration: none;
+		color: black;
+	}
+</style>
+<body>
+	<!---NAV SECTION--->
+	<div class="navbar navbar-expand-md navbar-dark" style="background-color: #312d84;">
+		<div class="container">
+		
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>	
+			</button>
+
+			<div class="navbar-brand me-5"><p class="h3 fw-bold">FCMB HACKATHON</p></div>
+
+			<div class="collapse navbar-collapse" id="navmenu">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a href="{{url_for('home')}}" class="nav-link">HOME</a></li>
+					<li class="nav-item"><a href="{{url_for('peer')}}" class="nav-link">PEER2PEER LOAN</a></li>
+					<li class="nav-item"><a href="{{url_for('about')}}" class="nav-link">ABOUT P2P</a></li>
+					<li class="nav-item"><a href="{{url_for('voice')}}" class="nav-link">VOICE OF THE CUSTOMER</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!---END OF NAV--->
+
+	<!---ABOUT--->
+		<div class="container">
+			<div class="text-center mt-5 display-6">WELCOME TO OUR PEER2PEER(P2P) LENDING PAGE</div>
+			<div class="text-center mt-3 lead">peer2peer is a financial practice and a feature of our application that enable user to lend money directly to other users, our system will give you the ABILITY TO GIVE SHORT-TIME LOAN, MONITOR THE LOAN and DEMAND PAYMENT FROM BENEFICIALRY</div>
+		</div>
+	<!---END ABOUT--->
+
+
+
+	<!---MAIN SECTION--->
+		<section class="container mt-4">
+			<div class="row justify-content-center g-3">
+				<div class="col-md-4 p-3 border rounded" style="background-color: #8093ff">
+					<p class="h4">REQUEST LOAN SECTION</p>
+					<p class="lead fw-light">Click the buttom below if you want to request for a loan</p>
+					<form action="/loan" method="post">
+						<button class="btn btn-light">REQUEST LOAN</button>
+					</form>
+				</div>
+
+				<div class="col-md-4 p-3 border rounded" style="background-color: #8093ff">
+					<p class="h4">NOTIFICATIONS</p>
+					<p class="lead fw-light">You will often give notification on all activities on this page</p>
+					<form class="input-group" action="/notify" method="post">
+						<input type="text" name="id" class="form-control" placeholder="Enter Your ID">
+						<button class="btn btn-light">ENTER</button>
+					</form>
+				</div>
+
+				<div class="col-md-4 p-3 border rounded" style="background-color: #8093ff">
+					<p class="h4">REPAY LOAN</p>
+					<p class="lead fw-light">This page give u access to pay back all pending loan</p>
+					<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#repayloan">REPAY LOAN</button>
+				</div>
+
+				<div class="col-md-4 mb-3 p-3 border rounded" style="background-color: #8093ff">
+					<p class="h4">LOAN TRACKER</p>
+					<p class="lead fw-light">This page give's you the ability to track all loan that you gave out and give's more detail about them</p>
+					<form class="input-group" action="/track" method="post">
+						<input type="text" name="id" class="form-control" placeholder="Enter YOUR ID">
+						<button class="btn btn-light">ENTER</button>
+					</form>
+				</div>
+				
+				<div class="col-md-4 mb-3 p-3 border rounded" style="background-color: #8093ff">
+					<p class="h4">REQUEST YOUR MONEY</p>
+					<p class="lead fw-light">This page give's you the ability to ask for your money back</p>
+					<form class="input" action="/askmoneyback" method="post">
+						<input type="text" name="id" class="form-control" placeholder="Enter ID OF BORROWER"><br>
+						<input type="text" name="message" class="form-control" placeholder="Drop your message here">
+						<button class="btn btn-light">ENTER</button>
+					</form>
+				</div>
+
+				<div class="col-md-4 mb-3 p-3 border rounded" style="background-color: #8093ff">
+					<p class="h4">GIVE LOAN</p>
+					<p class="lead fw-light">Click this page if you are interested in giving out loan or making quick transfer of money.</p>
+					<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#offerloan">OFFER LOAN</button>
+				</div>
+				
+			</div> 
+		</section>
+	<!---END MAIN SECTION--->
+
+	<!---MODAL OF LOAN OFFER BUTTON--->
+	<div class="modal fade" id="offerloan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">OFFER LOAN</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form action="/transfer" method="post">
+	          <div class="mb-3">
+	            <label for="recipient-name" class="col-form-label">ACCOUNT NUM:</label>
+	            <input type="text" name="accountnumber" class="form-control" id="recipient-name">
+	          </div>
+			
+			  <div class="mb-3">
+	            <label for="recipient-name" class="col-form-label">RECEIVER'S ID:</label>
+	            <input type="text" name="id" class="form-control" id="recipient-name">
+	          </div>
+
+			  <div class="mb-3">
+	            <label for="recipient-name" class="col-form-label">YOUR ID:</label>
+	            <input type="text" name="myid" class="form-control" id="recipient-name">
+	          </div>
+
+	          <div class="mb-3">
+	            <label for="recipient-name" class="col-form-label">AMOUNT:</label>
+	            <input type="text" name="amount" class="form-control" id="recipient-name">
+	          </div>
+
+	          <div class="mb-3">
+	            <label for="recipient-name" class="col-form-label">PASSWORD:</label>
+	            <input type="text" name="pass" class="form-control" id="recipient-name">
+	          </div>
+			
+			<div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	        <button type="submit" class="btn" style="background-color: #8093ff">SEND LOAN</button>
+	      </div>
+	        </form>
+	      </div>
+
+	    </div>
+	  </div>
+	</div>
+	<!---END MODAL OF LOAN OFFER BUTTON--->
+
+
+	<!---MODAL OF REPAY LOAN BUTTON--->
+	<div class="modal fade" id="repayloan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">REPAY LOAN</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form action="/transfer" method="post">
+				<div class="mb-3">
+				  <label for="recipient-name" class="col-form-label">ACCOUNT NUM:</label>
+				  <input type="text" name="accountnumber" class="form-control" id="recipient-name">
+				</div>
+			  
+				<div class="mb-3">
+				  <label for="recipient-name" class="col-form-label">RECEIVER'S ID:</label>
+				  <input type="text" name="id" class="form-control" id="recipient-name">
+				</div>
+  
+				<div class="mb-3">
+				  <label for="recipient-name" class="col-form-label">YOUR ID:</label>
+				  <input type="text" name="myid" class="form-control" id="recipient-name">
+				</div>
+  
+				<div class="mb-3">
+				  <label for="recipient-name" class="col-form-label">AMOUNT:</label>
+				  <input type="text" name="amount" class="form-control" id="recipient-name">
+				</div>
+  
+				<div class="mb-3">
+				  <label for="recipient-name" class="col-form-label">PASSWORD:</label>
+				  <input type="text" name="pass" class="form-control" id="recipient-name">
+				</div>
+			  
+			  <div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			  <button type="submit" class="btn" style="background-color: #8093ff">SEND LOAN</button>
+			</div>
+			  </form>
+	      </div>
+	      
+	    </div>
+	  </div>
+	</div>
+	<!---END MODAL OF REPAY LOAN BUTTON--->
+
+	<script type="text/javascript" src="{{url_for('static', filename='bootstrap-5/js/bootstrap.min.js')}}"></script>
+</body>
+</html>
